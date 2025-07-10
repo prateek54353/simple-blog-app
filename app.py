@@ -11,8 +11,8 @@ def get_db_connection():
     # Using g (global application context) to manage database connection per request
     if 'db' not in g:
         g.db = sqlite3.connect(
-            os.path.join(app.root_path, 'instance', 'database.db'), # Path to database.db
-            detect_types=sqlite3.PARSE_DATES
+            os.path.join(app.root_path, 'instance', 'database.db')
+            # Removed detect_types=sqlite3.PARSE_DATES as it's no longer supported in newer Python versions
         )
         g.db.row_factory = sqlite3.Row # Allows accessing columns by name
     return g.db
