@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Instance Folder (where database.db is stored)
+instance/
+
+# Editor/OS files
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.vscode/
